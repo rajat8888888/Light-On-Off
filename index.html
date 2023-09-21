@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+   <style>
+    .container {
+        position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 120px;
+}
+.btn{
+    position: relative;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: blueviolet;
+
+}
+   </style>
+</head>
+<body style="background-color: black;">
+
+    <img src="images.jpg" class="container" alt="off-bulb"/>
+    <button class="container btn">Turn On</button>
+
+    <script>
+        let bulb=document.getElementsByClassName("container")[0];
+        let btn=document.getElementsByClassName("btn")[0];
+
+        btn.addEventListener('click',turnOnOff)
+
+          function turnOnOff(e){
+            if(btn.textContent==='Turn On'){
+        
+         bulb.src="images(1).jpg"
+            btn.innerText="Turn Off"
+            }
+         
+          else{
+            bulb.src="images.jpg"
+            btn.innerText="Turn On"
+          }
+          }
+    </script>
+    
+</body>
+</html>
